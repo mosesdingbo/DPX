@@ -1,0 +1,42 @@
+<include file='Public:header' />
+<div class="bg">
+    <div class="container">
+        <div class="main">
+            <div class="inter">
+                <div class="intertitle">
+                    所有公告
+                </div>
+                <div class="intercontent">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="allnotice" id="vo">
+                            <tr>
+                                <td><a href="__APP__/Index/notice/time/<{$vo.time}>">
+                                    <{$vo.title}></a>
+                                </td>
+
+                                <td><a href="__APP__/Index/notice/time/<{$vo.time}>">
+                                    <{$vo.time|date='Y年 m月 d日',###}></a>
+                                </td>
+                            </tr>
+                        </volist>
+
+                        </tbody>
+                    </table>
+                    <div class="fenye">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <{$page}>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

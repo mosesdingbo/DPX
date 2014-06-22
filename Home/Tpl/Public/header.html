@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>大学生排球协会</title>
+	<link rel="stylesheet" href="__PUBLIC__/Home/css/style.css">
+  <link rel="stylesheet" href="__PUBLIC__/Home/css/bjqs.css">
+	<script src="__PUBLIC__/Home/js/jquery-1.7.1.min.js"></script>
+  <script src="__PUBLIC__/Home/js/bjqs-1.3.min.js"></script>
+  <script src="__PUBLIC__/Home/js/verticaltab.js"></script> 
+  <!-- nav-dropdown -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+        jQuery.navlevel2 = function(level1,dytime) {
+            
+          $(level1).mouseenter(function(){
+              varthis = $(this);
+              delytime=setTimeout(function(){
+                varthis.find('ul').slideDown();
+            },dytime);
+            
+          });
+          $(level1).mouseleave(function(){
+             clearTimeout(delytime);
+             $(this).find('ul').slideUp();
+          });
+          
+        };
+      $.navlevel2("li.mainlevel",100);
+    });
+  </script>
+  <!-- slier -->
+  <script class="secret-source">
+        jQuery(document).ready(function($) {
+          $('#banner-slide').bjqs({
+            animtype      : 'slide',
+            height        : 392,
+            width         : 589,
+            responsive    : true,
+            randomstart   : true
+          });
+        });
+  </script>
+  <!-- tab-menu -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      jQuery.jqtab = function(tabtit,tab_conbox,shijian) {
+        $(tab_conbox).find("li").hide();
+        $(tabtit).find("li:first").addClass("thistab").show(); 
+        $(tab_conbox).find("li:first").show();
+      
+        $(tabtit).find("li").bind(shijian,function(){
+          $(this).addClass("thistab").siblings("li").removeClass("thistab"); 
+          var activeindex = $(tabtit).find("li").index(this);
+          $(tab_conbox).children().eq(activeindex).show().siblings().hide();
+          return false;
+        });
+      
+      };
+      /*调用方法如下：*/
+      $.jqtab("#tabs","#tab_conbox","click");
+      
+      $.jqtab("#tabs2","#tab_conbox2","mouseenter");
+    });
+  </script>
+
+</head>
+<body>
+<div class="header">
+		<div class="container">
+            <img id="logo" src="__PUBLIC__/Home/images/logo.png" alt="">
+      <div class="login">
+        <a href="__APP__/Login/login">管理员入口</a>
+      </div>
+		</div>
+	</div>
+		<div class="nav">
+			<ul id="nav">
+			    <li class="mainlevel"><a href="__APP__/Index/index">首页</a></li>
+			    <li class="mainlevel"><a href="#">大排协</a>
+					<ul id="sub_02">
+					    <li><a href="__APP__/Dpx/intro">简介</a></li>
+					    <li><a href="__APP__/Dpx/member">会员学校</a></li>
+					    <li><a href="__APP__/Dpx/contact">联系方式</a></li>
+				    </ul>
+			    </li>
+			    <li class="mainlevel"><a href="#">竞赛活动</a>
+				    <ul id="sub_03">
+
+                    <volist name="union" id="vo">
+                        <li>
+                            <a href="__APP__/Competition/competitionlist/id/<{$vo.id}>">
+                            <{$vo.unionname}>
+                            </a>
+                        </li>
+                        </volist>
+				    </ul>
+				</li>
+			    <li class="mainlevel"><a href="__APP__/Inter/inter">国际往来</a></li>
+			    <li class="mainlevel"><a href="__APP__/Recruit/recruit">招生信息</a></li>
+			    <li class="mainlevel"><a href="__APP__/Study/study">学术交流</a></li>
+			</ul>
+		</div>

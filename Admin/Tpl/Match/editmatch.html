@@ -1,0 +1,76 @@
+<include file='Public:header' />
+	<div class="bg">
+        <form name=input action="__URL__/updatematch" method="post" enctype="multipart/form-data">
+            <input type='hidden' name='inserttime' value="<{$match.inserttime}>"/>
+        <div class="website">
+			<div class="title">
+				修改具体比赛
+			</div>
+            <div class="add">
+                <div class="words">所属联赛
+                    <select data-placeholder="<{$match.unionname}>" name="unionname" class="select" >
+                        <!-- 第一个option请为空不要动，因为要显示data-placeholder的值 -->
+                        <option value="-2"></option>
+                        <volist name="union" id="vo">
+                            <option value="<{$vo.unionname}>"><{$vo.unionname}></option>
+                        </volist>
+                    </select>
+                </div>
+            </div>
+            <div class="add">
+                <div class="words">比赛名称
+                    <input type="text" name="matchname" value="<{$match.matchname}>">
+                </div>
+            </div>
+			<div class="add">
+				<div class="words">开始时间
+				<input type="text" name="sdate" id="start" value="<{$match.sdate}>">
+				</div>
+				<div class="words">结束时间
+				<input type="text" name="edate" id="end" value="<{$match.edate}>">
+				</div>
+			</div>
+			<div class="add">
+				<div class="words" >比赛地点
+				<input type="text" name="location" value="<{$match.location}>">
+				</div>
+			</div>
+			<div class="add" >
+				<div class="words"  >比赛图片
+				<input type="file" name="imagename" value="<{$match.imagename}>">
+				</div>
+			</div>
+			<div class="add" name="intro">
+				<div class="words">比赛简介
+				<textarea id="TextArea1" name="intro" class="kindeditor" style="width:700px;height:600px;">
+                    <{$match.intro}>
+				</textarea>
+				</div>
+			</div>	
+			<div class="add">
+				<div class="words" >比赛规则
+				<textarea id="TextArea2" name="rule" class="kindeditor" style="width:700px;height:600px;">
+		             <{$match.rule}>
+	     		</textarea>
+				</div>
+			</div>	
+			<div class="publish-center" >
+			<input type="submit" value="修改" class="publish">
+			</div>
+		</div>
+            </form>
+	</div>
+		<!-- 调用Cheditor -->
+		<script type="text/javascript">
+	    CKEDITOR.replace('TextArea1');
+	    CKEDITOR.replace('TextArea2');
+	//如果是在ASP.NET环境下用的服务器端控件<TextBox>
+	    CKEDITOR.replace('tbContent');
+	//如果<TextBox>控件在母版页中，要这样写
+	    CKEDITOR.replace('<%=tbContent.ClientID.Replace("_","$") %>');
+		</script>
+
+
+
+</body>
+</html>

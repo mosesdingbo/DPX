@@ -1,0 +1,37 @@
+<include file='Public:header' />
+	<div class="bg">
+		<div class="add-cooperate">
+			<div class="title">
+				添加具体联赛
+			</div>
+            <form name="input" action="__URL__/createunion" method="post">
+			<div class="add">
+				<div class="words">联赛名
+				<input type="text" name="unionname">
+			</div>	
+			<div class="publish-center">
+				<input class="publish" type="submit" value="发布">
+			</div>
+			</div>
+           </form>
+			<div class="list">
+				<div class="words">已添加的联赛</div>
+				<table>
+					<tbody>
+                    <volist name="data" id="vo">
+						<tr>
+							<td><{$vo.unionname}></td>
+
+							<td><a href="__URL__/delunion/id/<{$vo.id}>">
+                                <input class="delete" type="submit" value="删除">
+                                 </a>
+                            </td>
+						</tr>
+                    </volist>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

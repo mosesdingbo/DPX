@@ -1,0 +1,41 @@
+<include file='Public:header' />
+	<div class="bg">
+	<div class="container">
+		<div class="main">
+			<div class="inter">
+				<div class="intertitle">
+					招生信息
+				</div>
+				<div class="intercontent">
+					<table>
+						<thead>
+							<tr>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+                        <volist name="recruitlist" id="in">
+                            <tr>
+                                <td>
+                                    <a href="__APP__/Index/article/time/<{$in.time}>">
+                                    <{$in.title}></a>
+                                </td>
+                                <td><a href="__APP__/Index/article/time/<{$in.time}>">
+                                    <{$in.time|date='Y年 m月 d日',###}></a>
+                                </td>
+                            </tr>
+                            </a>
+                        </volist>
+						</tbody>
+					</table>
+					<div class="fenye">
+                       <{$page}>
+					</div>
+				</div>
+			</div>
+      	</div>
+      	</div>
+    </div>
+</body>
+</html>

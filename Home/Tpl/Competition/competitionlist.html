@@ -1,0 +1,25 @@
+<include file='Public:header' />
+	<div class="bg">
+	<div class="container">
+		<div class="main">
+			<div class="competitionlist">
+				<ul>
+                    <volist name="match" id="vo">
+					<li style="background:url(__PUBLIC__/Uploads/matchimage/s_<{$vo.imagename}>);background-repeat:no-repeat;"><a href="__APP__/Competition/competition/time/<{$vo.inserttime}>">
+
+                        <div class="match-name"><{$vo.matchname}></div>
+                        <div class="match-location">举办地点：<{$vo.location}></div>
+                        <div class="match-date">举办日期：<{$vo.sdate}>到<{$vo.edate}></div>
+
+                    </a></li>
+                    </volist>
+				</ul>
+			</div>
+      	</div>
+    </div>
+        <div class="fenye">
+            <{$page1}>
+        </div>
+	</div>    
+</body>
+</html>

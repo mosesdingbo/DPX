@@ -1,0 +1,120 @@
+<include file='Public:header' />
+	<div class="bg">
+	<div class="container">
+		<div class="main">
+			<div class="slider">
+				<div id="banner-slide">
+			        <ul class="bjqs">
+			          <li><a href="#"><img src="__PUBLIC__/Uploads/sliderimage/m_<{$slider0}>"></a></li>
+			          <li><a href="#"><img src="__PUBLIC__/Uploads/sliderimage/m_<{$slider1}>"></a></li>
+			          <li><a href="#"><img src="__PUBLIC__/Uploads/sliderimage/m_<{$slider2}>"></a></li>
+			          <li><a href="#"><img src="__PUBLIC__/Uploads/sliderimage/m_<{$slider3}>"></a></li>
+			        </ul>
+	      		</div>
+      		</div>
+      		<div class="news">
+    				<div id="tabbox">
+    					<ul class="tabs" id="tabs2">
+    						<li><a href="#">首页新闻</a></li>
+    						<li><a href="#">公告</a></li>
+    						</li>
+    					</ul>
+              <ul class="tab_conbox" id="tab_conbox2">
+      				  <li class="tabcontent" id="tabcontent1">
+                  <div class="content">
+                    <volist name="news" id="vo">
+                        <a href="__APP__/Index/article/time/<{$vo.time}>"><{$vo.title}></a>
+                    </volist>    
+                  </div>
+      					  <div class="more"><a href="__APP__/Index/allnews">更多>></a></div>
+      				  </li>
+      				  <li class="tabcontent" id="tabcontent2">
+                  <div class="content">
+                    <volist name="notice" id="vo">
+                        <a href="__APP__/Index/notice/time/<{$vo.time}>"><{$vo.title}></a>
+                    </volist>
+                  </div>
+      					 <div class="more"><a href="__APP__/Index/allnotice">更多>></a></div>
+                </li>
+              </ul>
+            </div>
+      		</div>
+      		<div class="result">
+	      		<div class="mresult">
+                    <div class="resulttile">
+                       <{$boylist.matchname}>
+                    </div>
+                    <div class="resultcontent">
+                        <ul>
+                            <li><strong>第一名：</strong><{$boylist.one}></li>
+                            <li><strong>第二名：</strong><{$boylist.two}></li>
+                            <li><strong>第三名：</strong><{$boylist.three}></li>
+                            <li><strong>第四名：</strong><{$boylist.four}></li>
+                            <li><strong>第五名：</strong><{$boylist.five}></li>
+                            <li><strong>第六名：</strong><{$boylist.six}></li>
+                            <li><strong>第七名：</strong><{$boylist.seven}></li>
+                            <li><strong>第八名：</strong><{$boylist.eight}></li>
+                        </ul>
+                    </div>
+	      		</div>
+	      		<div class="mresult">
+                    <div class="resulttile">
+                       <{$girllist.matchname}>
+                    </div>
+                    <div class="resultcontent">
+                        <ul>
+                            <li><strong>第一名：</strong><{$girllist.one}></li>
+                            <li><strong>第二名：</strong><{$girllist.two}></li>
+                            <li><strong>第三名：</strong><{$girllist.three}></li>
+                            <li><strong>第四名：</strong><{$girllist.four}></li>
+                            <li><strong>第五名：</strong><{$girllist.five}></li>
+                            <li><strong>第六名：</strong><{$girllist.six}></li>
+                            <li><strong>第七名：</strong><{$girllist.seven}></li>
+                            <li><strong>第八名：</strong><{$girllist.eight}></li>
+                        </ul>
+                    </div>
+	      		</div>
+      		</div>
+		<div class="cooperate">
+			<div class="cotitle">
+				合作伙伴
+			</div>
+			<div class="cocontent">
+				<ul>
+                    <volist name="coop" id="vo">
+					<li>
+            <a href="http://<{$vo.link}>" target="_blank">
+            <img src="__PUBLIC__/Uploads/coopimage/s_<{$vo.coopimage}>" alt="合作伙伴">
+            </a>
+            <a href="http://<{$vo.link}>" target="_blank"><{$vo.partner}></a>
+                    </li>
+                    </volist>
+    <!--
+					<li>
+            <img src="__PUBLIC__/Uploads/coopimage/s_<{$co[1]['coopimage']}>" alt="合作伙伴">
+            <a href="http://<{$co[1]['link']}>" target="_blank"><{$co[1]['partner']}></a>
+          </li>
+					<li>
+            <img src="__PUBLIC__/Uploads/coopimage/s_<{$co[2]['coopimage']}>" alt="合作伙伴">
+            <a href="http://<{$co[2]['link']}>" target="_blank"><{$co[2]['partner']}></a>
+          </li>
+          <li>
+            <img src="__PUBLIC__/Uploads/coopimage/s_<{$co[3]['coopimage']}>" alt="合作伙伴">
+            <a href="http://<{$co[3]['link']}>" target="_blank"><{$co[3]['partner']}></a>
+          </li>
+          <li>
+            <img src="__PUBLIC__/Uploads/coopimage/s_<{$co[4]['coopimage']}>" alt="合作伙伴">
+            <a href="http://<{$co[4]['link']}>" target="_blank"><{$co[4]['partner']}></a>
+          </li>
+         -->
+				</ul>
+			</div>
+		</div>
+        </div>
+	</div>
+	</div>
+		<div class="footer">
+			<p>版权所有&copy;2014-2015中国大学生排球协会官方网站</p>
+		</div>
+</body>
+</html>

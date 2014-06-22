@@ -1,0 +1,87 @@
+<include file='Public:header' />
+	<div class="bg">
+        <form name=input action="__URL__/updateteam" method="post" enctype="multipart/form-data">
+            <input type='hidden' name='id' value="<{$team.id}>"/>
+		<div class="website">
+			<div class="title">
+				添加参赛队伍
+			</div>
+			<div class="add">
+				<div class="words">所属地区
+				<select  data-placeholder="所属地区" name="location" class="select">
+					<!-- 第一个option请为空不要动，因为要显示data-placeholder的值 -->
+					<option value="<{$team.location}>"></option>
+					<option value="华北">华北</option>
+					<option value="华南">华南</option>
+					<option value="华东">华东</option>
+					<option value="华中">华中</option>
+                    <option value="西北">西北</option>
+                    <option value="西南">西南</option>
+                    <option value="东北">东北</option>
+				</select>	
+				</div>
+			</div>
+
+            <div class="add">
+                <div class="words">所属比赛
+                    <select data-placeholder="所属比赛" name="matchname" class="select">
+                        <!-- 第一个option请为空不要动，因为要显示data-placeholder的值 -->
+                        <option value="<{$team.matchname}>"></option>
+                        <volist name="matchlist" id="vo">
+                            <option value="<{$vo.matchname}>">
+                                <{$vo.matchname}>
+                            </option>
+                        </volist>
+                        <!--
+                        <option value="华北">华北</option>
+                        <option value="华南">华南</option>
+                        <option value="华东">华东</option>
+                        <option value="华中">华中</option>
+                        <option value="西北">西北</option>
+                        <option value="西南">西南</option>
+                        <option value="东北">东北</option>
+                        -->
+                    </select>
+                </div>
+            </div>
+
+			<div class="add">
+				<div class="words">队伍名称
+				<input type="text" name="teamname" value="<{$team.teamname}>">
+				</div>
+			</div>
+			<div class="add">
+				<div class="words">队员名单
+				<input type="file" name="memberlist" value="<{$team.memberlist}>">
+				</div>
+			</div>
+			<div class="add">
+				<div class="words">队伍简介
+				<textarea id="TextArea1" name="info" class="kindeditor" style="width:700px;height:600px;">
+                    <{$team.info}>
+				</textarea>
+				</div>
+			</div>	
+			<div class="publish-center">
+			<input type="submit" value="保存修改" class="publish">
+			</div>
+		</div>
+        </form>
+	</div>
+		<!-- 调用Cheditor -->
+		<script type="text/javascript">
+	    CKEDITOR.replace('TextArea1');
+	    CKEDITOR.replace('TextArea2');
+	//如果是在ASP.NET环境下用的服务器端控件<TextBox>
+	    CKEDITOR.replace('tbContent');
+	//如果<TextBox>控件在母版页中，要这样写
+	    CKEDITOR.replace('<%=tbContent.ClientID.Replace("_","$") %>');
+		</script>		
+		<!-- 调用Chosen -->
+		<script>
+		$(function(){
+    		$('.select').chosen();
+		});
+		</script>
+</body>
+</html>

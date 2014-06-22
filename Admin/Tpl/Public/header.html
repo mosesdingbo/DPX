@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大学生排球协会</title>
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/style.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/css/jquery-ui.css">
+    <link rel="stylesheet" href="__PUBLIC__/Admin/chosen/chosen.css" type="text/css" />
+    <script src="__PUBLIC__/Admin/js/jquery-1.7.1.min.js"></script>
+    <!-- Cheditor -->
+    <!-- <script src="__PUBLIC__/Admin/ckeditor/ckeditor.js"></script> -->
+    <!-- KindEditor -->
+    <script charset="utf-8" src="__PUBLIC__/Admin/kindeditor/kindeditor-min.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/Admin/kindeditor/lang/zh_CN.js"></script>
+    <script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('.kindeditor');
+        });
+    </script>
+    <!-- Chosen -->
+    <script type="text/javascript" src="__PUBLIC__/Admin/chosen/chosen.jquery.js"></script>
+    <!-- nav-dropdown -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            jQuery.navlevel2 = function(level1,dytime) {
+                
+              $(level1).mouseenter(function(){
+                  varthis = $(this);
+                  delytime=setTimeout(function(){
+                    varthis.find('ul').slideDown();
+                },dytime);
+                
+              });
+              $(level1).mouseleave(function(){
+                 clearTimeout(delytime);
+                 $(this).find('ul').slideUp();
+              });
+              
+            };
+          $.navlevel2("li.mainlevel",100);
+        });
+    </script>   
+    <!-- datepick -->
+    <script src="__PUBLIC__/Admin/js/jquery-ui.js"></script>
+     <script>
+    $(function() {
+     $("#start").datepicker({ dateFormat: "yy-mm-dd" });
+     $("#end").datepicker({ dateFormat: "yy-mm-dd" });
+    });
+    </script>
+    <script>
+    $((function($){
+    $.datepicker.regional['zh-CN'] = {
+        clearText: '清除',
+        clearStatus: '清除已选日期',
+        closeText: '关闭',
+        closeStatus: '不改变当前选择',
+        prevText: '<上月',
+        prevStatus: '显示上月',
+        prevBigText: '<<',
+        prevBigStatus: '显示上一年',
+        nextText: '下月>',
+        nextStatus: '显示下月',
+        nextBigText: '>>',
+        nextBigStatus: '显示下一年',
+        currentText: '今天',
+        currentStatus: '显示本月',
+        monthNames: ['一月','二月','三月','四月','五月','六月', '七月','八月','九月','十月','十一月','十二月'],
+        monthNamesShort: ['一','二','三','四','五','六', '七','八','九','十','十一','十二'],
+        monthStatus: '选择月份',
+        yearStatus: '选择年份',
+        weekHeader: '周',
+        weekStatus: '年内周次',
+        dayNames: ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'],
+        dayNamesShort: ['周日','周一','周二','周三','周四','周五','周六'],
+        dayNamesMin: ['日','一','二','三','四','五','六'],
+        dayStatus: '设置 DD 为一周起始',
+        dateStatus: '选择 m月 d日, DD',
+        dateFormat: 'yy-mm-dd',
+        firstDay: 1,
+        initStatus: '请选择日期',
+        isRTL: false};
+        $.datepicker.setDefaults($.datepicker.regional['zh-CN']);
+    })(jQuery));
+    </script>
+      <!-- tab-menu -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      jQuery.jqtab = function(tabtit,tab_conbox,shijian) {
+        $(tab_conbox).find("li").hide();
+        $(tabtit).find("li:first").addClass("thistab").show(); 
+        $(tab_conbox).find("li:first").show();
+      
+        $(tabtit).find("li").bind(shijian,function(){
+          $(this).addClass("thistab").siblings("li").removeClass("thistab"); 
+          var activeindex = $(tabtit).find("li").index(this);
+          $(tab_conbox).children().eq(activeindex).show().siblings().hide();
+          return false;
+        });
+      
+      };
+      /*调用方法如下：*/
+      $.jqtab("#tabs","#tab_conbox","click");
+      
+      $.jqtab("#tabs2","#tab_conbox2","mouseenter");
+    });
+  </script>
+
+</head>
+<body>
+<div class="header">    
+    <div class="container">
+        <img id="logo" src="__PUBLIC__/Admin/images/logo.png" alt="">
+        <div class="login">
+
+            <a href="__APP__/Logout/dologout">退出</a>
+            <a href="#"></a>
+        </div>
+    </div>
+</div>
+<div class="nav">
+    <ul id="nav">
+        <li class="mainlevel"><a href="#">文章</a>
+            <ul id="sub_02">
+                <li><a href="__APP__/Article/addarticle">发表文章</a></li>
+                <li><a href="__APP__/Article/articlelist">文章列表</a></li>
+                <li><a href="__APP__/Article/addnotice">发布公告</a></li>
+                <li><a href="__APP__/Article/noticelist">公告列表</a></li>
+            </ul>
+        </li>
+        <li class="mainlevel"><a href="#">基础信息</a>
+            <ul id="sub_03">
+                <li><a href="__APP__/Base/website">大排协</a></li>
+                <li><a href="__APP__/Base/slider">动态图</a></li>
+                <li><a href="__APP__/Base/addcooperate">合作伙伴</a></li>
+            </ul>
+        </li>
+        <li class="mainlevel"><a href="#">添加赛事</a>
+            <ul id="sub_04">
+                <li><a href="__APP__/Match/addunion">添加具体联赛</a></li>
+                <li><a href="__APP__/Match/addmatch">添加具体比赛</a></li>
+                <li><a href="__APP__/Match/addteam">添加参赛队伍</a></li>
+                <li><a href="__APP__/Match/addathlete">添加球队员工</a></li>
+                <li><a href="__APP__/Match/matchlist">具体赛事列表</a></li>
+    <!--        <li><a href="__APP__/Match/teamlist">参赛队伍列表</a></li>   -->
+
+    <!--      <li><a href="__APP__/Match/athleteteam">队员信息列表</a></li>   -->
+            </ul>
+        </li>
+        <li class="mainlevel"><a href="#">添加比赛排名</a>
+            <ul id="sub_05">
+                <li><a href="__APP__/Match/addrankboy">男排</a></li>
+                <li><a href="__APP__/Match/addrankgirl">女排</a></li>
+            </ul>
+        </li>
+        <li class="mainlevel"><a href="#">会员学校</a>
+            <ul id="sub_05">
+                <li><a href="__APP__/School/addschool">添加会员学校</a></li>
+                <li><a href="__APP__/School/schoollist">学校列表</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>

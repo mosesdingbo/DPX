@@ -1,0 +1,39 @@
+<include file='Public:header' />
+	<div class="bg">
+		<div class="article-list">
+			<div class="title">
+				具体赛事列表
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<td>赛事名称</td>
+                        <td>参赛队伍</td>
+						<td>编辑</td>
+					</tr>
+				</thead>
+				<tbody>
+                <volist name="matchlist" id="vo">
+					<tr>
+						<td><{$vo.matchname}></td>
+                        <td><a href="__URL__/teamlist/inserttime/<{$vo.inserttime}>">点击查看参赛的队伍列表</a></td>
+						<td>
+                            <a href="__URL__/editmatch/inserttime/<{$vo.inserttime}>">
+                                <input class="edit" type="submit" value="编辑">
+                            </a>
+                            &nbsp;
+                            <a href="__URL__/deletematch/inserttime/<{$vo.inserttime}>">
+                                <input class="delete" type="submit" value="删除">
+                            </a>
+						</td>
+					</tr>
+                </volist>
+				</tbody>
+			</table>
+            <div class="fenye">
+                <{$page}>
+            </div>
+		</div>
+	</div>
+</body>
+</html>

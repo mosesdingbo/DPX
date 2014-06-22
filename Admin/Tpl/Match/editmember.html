@@ -1,0 +1,49 @@
+<include file='Public:header' />
+	<div class="bg">
+        <form action='__URL__/updatemember' method='post' name="input" enctype="multipart/form-data">
+            <input type='hidden' name='id' value="<{$member.id}>"/>
+			<div class="add-cooperate">
+			<div class="title">
+				添加球员信息
+			</div>
+			<div class="add">
+			<div class="words">球员名字
+				<input type="text" name="membername" value="<{$member.membername}>">
+			</div>		
+			<div class="words">球员照片
+				<input type="file" name="picture" value="<{$member.picture}>">
+			</div>	
+			<div class="words">所属比赛
+				<select data-placeholder="所属比赛" name="matchname" class="select">
+					<!-- 第一个option请为空不要动，因为要显示data-placeholder的值 -->
+					<option value="<{$member.teamname}>"></option>
+                    <volist name="match" id="vo">
+                    <option value="<{$vo.matchname}>" ><{$vo.matchname}></option>
+                    </volist>
+				</select>	
+			</div>
+            <div class="words">
+                    所属球队<input type="text" name="teamname" value="<{$member.teamname}>">
+                </div>
+            <div class="words">队员身份
+                    <select data-placeholder="球员身份" name="type" class="select">
+                        <!-- 第一个option请为空不要动，因为要显示data-placeholder的值 -->
+                        <option value="-1"></option>
+                        <option value="教练" >教练</option>
+                        <option value="副教练" >副教练</option>
+                        <option value="球员" >球员</option>
+                    </select>
+            </div>
+            <div class="publish-center">
+				<input class="publish" type="submit" value="保存修改">
+			</div>
+          </form>
+	</div>
+		<!-- 调用Chosen -->
+		<script>
+		$(function(){
+    		$('.select').chosen();
+		});
+		</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<include file='Public:header' />
+	<div class="bg">
+	<div class="container">
+		<div class="main">
+			<div class="intro">
+				<div class="left">
+					<div class="lefttitle">
+						学术交流
+					</div>
+					<div class="verticaltab">
+						<ul>
+							<li class="on" id="tb_11" onclick="HoverLi(1,1,3);"><a href="#">教学心得</a></li>
+							<li class="" id="tb_12" onclick="HoverLi(1,2,3);"><a href="#">科技动态</a></li>
+							<li class="" id="tb_13" onclick="HoverLi(1,3,3);"><a href="#">我有疑问</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right">
+							<div class="dis" id="tbc_11">
+								<div class="righttitle">教学心得</div>
+								<div class="studycontent">
+										<table>
+											<tbody>
+                                            <volist name="teachinglist" id="in">
+                                                <tr>
+                                                    <td><a href="__APP__/Index/article/time/<{$in.time}>">
+                                                        <{$in.title}></a>
+                                                    </td>
+                                                    <td><a href="__APP__/Index/article/time/<{$in.time}>">
+                                                        <{$in.time|date='Y年 m月 d日',###}></a>
+                                                    </td>
+                                                </tr>
+                                            </volist>
+											</tbody>
+										</table>
+								</div>
+								<div class="fenye">
+									<{$page1}>
+								</div>
+							</div>
+							<div class="undis" id="tbc_12">
+								<div class="righttitle">科技动态</div>
+								<div class="studycontent">
+										<table>
+											<tbody>
+                                            <volist name="sciencelist" id="in">
+                                                <tr>
+                                                    <td><a href="__APP__/Index/article/time/<{$in.time}>">
+                                                        <{$in.title}></a>
+                                                    </td>
+                                                    <td><a href="__APP__/Index/article/time/<{$in.time}>">
+                                                        <{$in.time|date='Y年 m月 d日',###}></a>
+                                                    </td>
+                                                </tr>
+                                            </volist>
+											</tbody>
+										</table>
+                                                                       </div>
+										<div class="fenye">
+                                           
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<{$page2}>
+										</div>
+								
+							</div>
+							<div class="undis" id="tbc_13">
+								<div class="righttitle">我有疑问</div>
+								<div class="studycontent">
+										<table>
+											<tbody>
+                                            <volist name="questionlist" id="in">
+                                                <tr>
+                                                    <td><a href="__APP__/Index/article/time/<{$in.time}>">
+                                                        <{$in.title}></a>
+                                                    </td>
+                                                    <td><a href="__APP__/Index/article/time/<{$in.time}>">
+                                                        <{$in.time|date='Y年 m月 d日',###}></a>
+                                                    </td>
+                                                </tr>
+                                            </volist>
+											</tbody>
+										</table>
+                                                                               </div>
+										<div class="fenye">
+                                             
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<{$page3}>
+										</div>
+							
+							</div>
+				</div>
+			</div>	
+		</div>
+    </div>
+    </div>
+</body>
+</html>

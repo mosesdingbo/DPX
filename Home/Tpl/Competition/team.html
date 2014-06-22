@@ -1,0 +1,75 @@
+<include file='Public:header' />
+	<div class="bg">
+	<div class="container">
+		<div class="main">
+			<div class="intro team">
+				<div class="left">
+					<div class="lefttitle">
+				        <{$team.teamname}>
+					</div>
+					<div class="verticaltab">
+						<ul>
+							<li class="on" id="tb_11" onclick="HoverLi(1,1,2);"><a href="#">球队简介</a></li>
+							<li class="" id="tb_12" onclick="HoverLi(1,2,2);"><a href="#">球队信息</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right">
+					<div class="dis" id="tbc_11">
+						<div class="righttitle">球队简介</div>
+						<div class="rightcontent"><{$team.info}></div>
+					</div>
+					<div class="undis" id="tbc_12">
+						<div class="righttitle">球队信息</div>
+						<div class="rightcontent">
+							<div class="coach">
+								<ul>
+                            <volist name="coach" id="vo">
+                            	<li>
+                                <div class="certificate"><{$vo.type}></div>
+                                <div class="photo">
+                                	<img src="__PUBLIC__/Uploads/memberpicture/s_<{$vo.picture}>">
+                                </div>
+								<div class="name"><{$vo.membername}></div>
+								</li>
+                            </volist>
+                            </ul>
+							</div>
+							<div class="assistant">
+								<ul>
+                            <volist name="assistant" id="vo">
+                            	<li>
+                                <div class="certificate"><{$vo.type}></div>
+                                <div class="photo">
+                                	<img src="__PUBLIC__/Uploads/memberpicture/s_<{$vo.picture}>">
+                                </div>
+								<div class="name"><{$vo.membername}></div>
+								</li>
+                            </volist>
+                        		</ul>
+							</div>
+							<div class="player">
+                                球员:
+								<ul>
+                            <volist name="player" id="vo">
+									<li>
+                       <!--       <div class="certificate"><{$vo.type}></div>  -->
+                                <div class="photo">
+                                	<img src="__PUBLIC__/Uploads/memberpicture/s_<{$vo.picture}>">
+                                </div>
+								<div class="name"><{$vo.membername}></div>
+
+                            		</li>
+                            </volist>
+                            	</ul>
+							</div>
+                            <div class="atheleteform"><a href="__PUBLIC__/Uploads/memberlist/<{$team.memberlist}>"> 球队球员详细表格下载</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    </div>
+</body>
+</html>

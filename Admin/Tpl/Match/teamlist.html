@@ -1,0 +1,295 @@
+<include file='Public:header' />
+	<div class="bg">
+		<div class="article-list">
+			<div class="title">
+				<{$match.matchname}>（点击球队查看队员信息）
+			</div>
+
+            <div class="inter member">
+                <div class="search">
+                    <form action="#">
+                        <input type="text" class="searchcontent" placeholder="请输入你想要搜索的内容">
+                        <input type="submit" class="searchbutton" value="">
+                    </form>
+                </div>
+                <div id="tabbox">
+                    <ul  class="tabs" id="tabs2">
+                        <li><a href="#">全部</a></li>
+                        <li><a href="#">华南</a></li>
+                        <li><a href="#">华北</a></li>
+                        <li><a href="#">华中</a></li>
+                        <li><a href="#">华东</a></li>
+                        <li><a href="#">西北</a></li>
+                        <li><a href="#">西南</a></li>
+                        <li><a href="#">东北</a></li>
+                    </ul> 
+                    <ul class="tab_conbox" id="tab_conbox2">
+                        <li id="anothercontent1" class="tab_con">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <td>球队名称</td>
+                                        <td>编辑</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <volist name="team" id="vo">
+                                        <tr>
+
+                                            <td>
+                                                <a href="__URL__/athletelist/id/<{$vo.id}>">
+                                                    <{$vo.teamname}></a>
+                                            </td>
+                                            <td>
+                                                <a href="__URL__/editteam/id/<{$vo.id}>">
+                                                    <input class="edit" type="button" value="编辑">
+                                                </a>
+                                                &nbsp;
+                                                <a href="__URL__/deleteteam/id/<{$vo.id}>">
+                                                    <input class="delete" type="button" value="删除">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    <{$page1}>
+                                </div>
+                        </li>
+                        <li id="anothercontent2" class="tab_con">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <td>球队名称</td>
+                                        <td>编辑</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                <volist name="huanan" id="vo">
+                                    <tr>
+
+                                        <td>
+                                            <a href="__URL__/athletelist/id/<{$vo.id}>">
+                                                <{$vo.teamname}></a>
+                                        </td>
+                                        <td>
+                                            <a href="__URL__/editteam/id/<{$vo.id}>">
+                                                <input class="edit" type="button" value="编辑">
+                                            </a>
+                                            &nbsp;
+                                            <a href="__URL__/deleteteam/id/<{$vo.id}>">
+                                                <input class="delete" type="button" value="删除">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    <{$page2}>
+                                </div>
+                        </li>
+                        <li id="anothercontent3" class="tab_con">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <td>球队名称</td>
+                                        <td>编辑</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                <volist name="huabei" id="vo">
+                                    <tr>
+
+                                        <td>
+                                            <a href="__URL__/athletelist/id/<{$vo.id}>">
+                                                <{$vo.teamname}></a>
+                                        </td>
+                                        <td>
+                                            <a href="__URL__/editteam/id/<{$vo.id}>">
+                                                <input class="edit" type="button" value="编辑">
+                                            </a>
+                                            &nbsp;
+                                            <a href="__URL__/deleteteam/id/<{$vo.id}>">
+                                                <input class="delete" type="button" value="删除">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    <{$page3}>
+                                </div>
+                        </li>
+                        <li id="anothercontent4" class="tab_con">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <td>球队名称</td>
+                                        <td>编辑</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                <volist name="huazhong" id="vo">
+                                    <tr>
+
+                                        <td>
+                                            <a href="__URL__/athletelist/id/<{$vo.id}>">
+                                                <{$vo.teamname}></a>
+                                        </td>
+                                        <td>
+                                            <a href="__URL__/editteam/id/<{$vo.id}>">
+                                                <input class="edit" type="button" value="编辑">
+                                            </a>
+                                            &nbsp;
+                                            <a href="__URL__/deleteteam/id/<{$vo.id}>">
+                                                <input class="delete" type="button" value="删除">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    <{$page4}>
+                                </div>
+                        </li>
+                        <li id="anothercontent5" class="tab_con">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <td>球队名称</td>
+                                        <td>编辑</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                <volist name="huadong" id="vo">
+                                    <tr>
+                                        <td>
+                                            <a href="__URL__/athletelist/id/<{$vo.id}>">
+                                                <{$vo.teamname}></a>
+                                        </td>
+                                        <td>
+                                            <a href="__URL__/editteam/id/<{$vo.id}>">
+                                                <input class="edit" type="button" value="编辑">
+                                            </a>
+                                            &nbsp;
+                                            <a href="__URL__/deleteteam/id/<{$vo.id}>">
+                                                <input class="delete" type="button" value="删除">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    <{$page5}>
+                                </div>
+                        </li>
+                        <li id="anothercontent6" class="tab_con">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <td>球队名称</td>
+                                        <td>编辑</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                <volist name="xibei" id="vo">
+                                    <tr>
+                                        <td>
+                                            <a href="__URL__/athletelist/id/<{$vo.id}>">
+                                                <{$vo.teamname}></a>
+                                        </td>
+                                        <td>
+                                            <a href="__URL__/editteam/id/<{$vo.id}>">
+                                                <input class="edit" type="button" value="编辑">
+                                            </a>
+                                            &nbsp;
+                                            <a href="__URL__/deleteteam/id/<{$vo.id}>">
+                                                <input class="delete" type="button" value="删除">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    <{$page6}>
+                                </div>
+                        </li>
+                        <li id="anothercontent7" class="tab_con">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <td>球队名称</td>
+                                        <td>编辑</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                <volist name="xinan" id="vo">
+                                    <tr>
+                                        <td>
+                                            <a href="__URL__/athletelist/id/<{$vo.id}>">
+                                                <{$vo.teamname}></a>
+                                        </td>
+                                        <td>
+                                            <a href="__URL__/editteam/id/<{$vo.id}>">
+                                                <input class="edit" type="button" value="编辑">
+                                            </a>
+                                            &nbsp;
+                                            <a href="__URL__/deleteteam/id/<{$vo.id}>">
+                                                <input class="delete" type="button" value="删除">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    <{$page7}>
+                                </div>
+                        </li>
+                        <li id="anothercontent8" class="tab_con">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <td>球队名称</td>
+                                        <td>编辑</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                <volist name="dongbei" id="vo">
+                                    <tr>
+                                        <td>
+                                            <a href="__URL__/athletelist/id/<{$vo.id}>">
+                                                <{$vo.teamname}></a>
+                                        </td>
+                                        <td>
+                                            <a href="__URL__/editteam/id/<{$vo.id}>">
+                                                <input class="edit" type="button" value="编辑">
+                                            </a>
+                                            &nbsp;
+                                            <a href="__URL__/deleteteam/id/<{$vo.id}>">
+                                                <input class="delete" type="button" value="删除">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    <{$page8}>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+	</div>
+</body>
+</html>

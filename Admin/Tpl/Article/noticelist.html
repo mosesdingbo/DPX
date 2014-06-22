@@ -1,0 +1,43 @@
+<include file='Public:header' />
+<div class="bg">
+    <div class="article-list">
+        <div class="title">
+            公告列表
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <td>文章名称</td>
+                <td>发表日期</td>
+                <td>分类目录</td>
+                <td>所属比赛</td>
+                <td>编辑</td>
+            </tr>
+            </thead>
+            <tbody>
+
+            <volist name='noticelist' id='vo'>
+                <tr>
+
+                    <td><{$vo.title}></td>
+                    <td><{$vo.time|date='Y年  m月  d日  H:i:s',###}></td>
+                    <td>公告</td>
+                    <td><{$vo.matchname}></td>
+                    <td><a href="__URL__/deletenotice/date/<{$vo.time}>">
+                        <input class="delete" type="submit" value="删除">
+                    </a>
+                    </td>
+                </tr>
+            </volist>
+            </tbody>
+            <div class="fenye">
+                <{$page}>
+            </div>
+
+        </table>
+
+    </div>
+
+</div>
+</body>
+</html>

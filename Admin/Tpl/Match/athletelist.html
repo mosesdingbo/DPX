@@ -1,0 +1,44 @@
+<include file='Public:header' />
+	<div class="bg">
+		<div class="article-list">
+			<div class="title">
+				球员信息列表
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<td>队员员名字</td>
+                        <td>队员身份</td>
+                        <td>参加比赛</td>
+						<td>所属球队</td>
+                        <td>照片</td>
+						<td>编辑</td>
+					</tr>
+				</thead>
+				<tbody>
+                <volist name="memberlist" id="vo">
+					<tr>
+						<td><{$vo.membername}></td>
+                        <td><{$vo.type}></td>
+                        <td><{$vo.matchname}></td>
+						<td><{$vo.teamname}></td>
+                        <td><img src="__PUBLIC__/Uploads/memberpicture/s_<{$vo.picture}>"></td>
+						<td>
+                              <a href="__URL__/editmember/id/<{$vo.id}>">
+							<input class="edit" type="button" value="编辑">
+                              </a>
+							&nbsp;
+	                          <a href="__URL__/deletemember/id/<{$vo.id}>">
+			         		<input class="delete" type="button" value="删除">
+                              </a>
+						</td>
+					</tr>
+                </volist>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
+

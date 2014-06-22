@@ -1,0 +1,46 @@
+<include file='Public:header' />
+	<div class="bg">
+        <form action="__URL__/createcooperate" method="post" enctype="multipart/form-data">
+		<div class="add-cooperate">
+			<div class="title">
+				添加合作伙伴
+			</div>
+			<div class="add">
+				<div class="words">合作伙伴
+					<input type="text" name="partner">
+				</div>	
+				<div class="words">网址链接
+					<input type="text" name="link" placeholder="网址直接以www形式,不需要http://">
+				</div>	
+				<div class="words">上传图片
+                    <input type="file" name="coopimage">
+				</div>
+				<div class="publish-center">
+					<input class="publish" type="submit" value="发布">
+				</div>
+			</div>
+			<div class="list">
+				<div class="words">已添加的合作伙伴</div>
+				<table>
+					<tbody>
+						<tr>
+                            <volist name='data' id='vo'>
+                                <tr>
+                                    <td><{$vo.partner}></td>
+                                    <td><img src="__PUBLIC__/Uploads/coopimage/s_<{$vo.coopimage}>"></s_></td>
+                                    <td><a href="__URL__/delcooperate/id/<{$vo.id}>">
+
+                                        <input class="delete" type="button" value="删除">
+                                    </a>
+                                    </td>
+                                </tr>
+                            </volist>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+            </form>
+	</div>
+</body>
+</html>

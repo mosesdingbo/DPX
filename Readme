@@ -1,0 +1,16 @@
+1.服务器站点配置
+如果是本地测试,建议用wamp集成环境;
+服务器端配置mysql+php+apache或者mysql+php+nginx.
+
+
+2.sql文件导入:
+mysql -h host -u username -p < /../../dpx.sql
+(本地的话用localhost代替host,username为数据库的用户名,并且指定sql文件的完整路径).
+
+
+3.在本文件根目录下有config.php配置文件,修改其中最后一条:
+ 'DB_DSN'=>'mysql://username:password@localhost:3306/dpx',把其中的username替换成自己的数据库用户名,password替换为数据库密码,如无密码,留空.修改并保存.
+ 
+4.前台应用文件夹为dpx25/Home,前台前端页面在dpx/Home/Tpl文件夹下,
+  后台应用文件夹为dpx25/Admin,后台前端页面在dpx/Admin/Tpl文件夹下.
+  

@@ -1,0 +1,210 @@
+<include file='Public:header' />
+<div class="bg">
+    <div class="container">
+        <div class="main">
+            <div class="inter member">
+                <div class="search">
+                    <form action="__URL__/searchschool" method="post">
+                        <input type="text" class="searchcontent" placeholder="请输入你想要搜索的内容" name="schoolname">
+                        <input type="submit" class="searchbutton" value="">
+                    </form>
+                </div>
+                <div id="tabbox">
+                    <ul  class="tabs" id="tabs2">
+                        <li><a href="#">全部</a></li>
+                        <li><a href="#">华北</a></li>
+                        <li><a href="#">东北</a></li>
+                        <li><a href="#">华东</a></li>
+                        <li><a href="#">华中</a></li>
+                        <li><a href="#">西北</a></li>
+                        <li><a href="#">西南</a></li>
+                        <li><a href="#">华南</a></li>
+                    </ul> 
+                    <ul class="tab_conbox" id="tab_conbox2">
+                        <li id="anothercontent1" class="tab_con">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th>图片</th>
+                                        <th>学校名称</th>
+                                    </tr>
+                                    <volist name="school" id="vo">
+                                        <tr>
+                                            <td><img src="__PUBLIC__/Uploads/schoollogo/s_<{$vo.logo}>"></td>
+                                            <td>
+                                                <a href="__URL__/school/id/<{$vo.id}>"><{$vo.name}></a>
+                                            </td>
+                                        </tr>
+                                    </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <{$page}>
+                                </div>
+                        </li>
+                        <li id="anothercontent2" class="tab_con">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th>图片</th>
+                                        <th>学校名称</th>
+                                    </tr>
+                                <volist name="huabei" id="vo">
+                                    <tr>
+
+                                        <td><img src="__PUBLIC__/Uploads/schoollogo/s_<{$vo.logo}>"></td>
+                                        <td>
+                                            <a href="__URL__/school/id/<{$vo.id}>"><{$vo.name}></a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <{$page2}>
+                                </div>
+                        </li>
+                        <li id="anothercontent3" class="tab_con">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th>图片</th>
+                                        <th>学校名称</th>
+                                    </tr>
+                                <volist name="dongbei" id="vo">
+                                    <tr>
+
+                                        <td><img src="__PUBLIC__/Uploads/schoollogo/s_<{$vo.logo}>"></td>
+                                        <td>
+                                            <a href="__URL__/school/id/<{$vo.id}>"><{$vo.name}></a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <{$page3}>
+                                </div>
+                        </li>
+                        <li id="anothercontent4" class="tab_con">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th>图片</th>
+                                        <th>学校名称</th>
+                                    </tr>
+                                <volist name="huadong" id="vo">
+                                    <tr>
+
+                                        <td><img src="__PUBLIC__/Uploads/schoollogo/s_<{$vo.logo}>"></td>
+                                        <td>
+                                            <a href="__URL__/school/id/<{$vo.id}>"><{$vo.name}></a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <{$page4}>
+                                </div>
+                        </li>
+                        <li id="anothercontent5" class="tab_con">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th>图片</th>
+                                        <th>学校名称</th>
+                                    </tr>
+                                <volist name="huazhong" id="vo">
+                                    <tr>
+                                        <td><img src="__PUBLIC__/Uploads/schoollogo/s_<{$vo.logo}>"></td>
+                                        <td>
+                                            <a href="__URL__/school/id/<{$vo.id}>"><{$vo.name}></a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <{$page5}>
+                                </div>
+                        </li>
+                        <li id="anothercontent6" class="tab_con">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th>图片</th>
+                                        <th>学校名称</th>
+                                    </tr>
+                                <volist name="xibei" id="vo">
+                                    <tr>
+                                        <td><img src="__PUBLIC__/Uploads/schoollogo/s_<{$vo.logo}>"></td>
+                                        <td>
+                                            <a href="__URL__/school/id/<{$vo.id}>"><{$vo.name}></a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <{$page6}>
+                                </div>
+                        </li>
+                        <li id="anothercontent7" class="tab_con">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th>图片</th>
+                                        <th>学校名称</th>
+                                    </tr>
+                                <volist name="xinan" id="vo">
+                                    <tr>
+                                        <td><img src="__PUBLIC__/Uploads/schoollogo/s_<{$vo.logo}>"></td>
+                                        <td>
+                                            <a href="__URL__/school/id/<{$vo.id}>"><{$vo.name}></a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <{$page7}>
+                                </div>
+                        </li>
+                        <li id="anothercontent8" class="tab_con">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th>图片</th>
+                                        <th>学校名称</th>
+                                    </tr>
+                                <volist name="huanan" id="vo">
+                                    <tr>
+                                        <td><img src="__PUBLIC__/Uploads/schoollogo/s_<{$vo.logo}>"></td>
+                                        <td>
+                                            <a href="__URL__/school/id/<{$vo.id}>"><{$vo.name}></a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                                    </tbody>
+                                </table>
+                                <div class="fenye">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <{$page8}>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
